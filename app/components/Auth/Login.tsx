@@ -101,13 +101,13 @@ const Login: FC<Props> = ({setRoute, setOpen}) => {
          {
             !show ? (
                 <AiOutlineEye
-                   className="absolute bottom-3 right-2 z-1 cursor-pointer"
+                   className="absolute bottom-3 right-2 z-1 cursor-pointer dark:text-white text-black"
                    size={20}
                    onClick={() => setShow(true)}
                 />
             )   : (
                 <AiOutlineEyeInvisible
-                   className="absolute bottom-3 right-2 z-1 cursor-pointer"
+                   className="absolute bottom-3 right-2 z-1 cursor-pointer dark:text-white text-black"
                    size={20}
                    onClick={() => setShow(false)}
                 />   
@@ -131,9 +131,9 @@ const Login: FC<Props> = ({setRoute, setOpen}) => {
         or join with
         </h5>
         <div className="flex items-center justify-center my-3"> 
-            <FcGoogle size={30} className="cursor-pointer mr-2"
+            <FcGoogle size={30} className="cursor-pointer mr-2 dark:text-white text-black"
             onClick={() => signIn("google")}/>
-            <AiFillGithub size={30} className="cursor-pointer ml-2"
+            <AiFillGithub size={30} className="cursor-pointer ml-2 dark:text-white text-black"
             onClick={() => signIn("github")}/>
         </div>  
         <h5 className="text-center pt-4 font-Poppins text-[14px] text-black dark:text-white">

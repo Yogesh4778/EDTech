@@ -7,11 +7,11 @@ type Props = {};
 
 const Hero: FC<Props> = (props) => {
     return (
-        <div className="w-full flex items-center">
+        <div className="w-full flex items-center overflow-hidden">
             {/* due niche wala div */}
             {/* <div className="absolute top-[100px] 1000px:top-[unset] 1500px:h-[700px] 1500px:w-[700px] 1100px:h-[600px] 1100px:w-[600px] h-[50vh] w-[50vh] hero_animation " > */}
-                <div className="flex top-[50px] 1000px:top-[unset] 1500px:h-[700px] 1500px:w-[700px]">
-               <div className="1000px:w-[40%] flex 1000px:min-h-screen items-center justify-end pt-[70px] 1000px:pt-[0] z-10 mt-10" >
+                <div className="flex top-[40px] 1000px:top-[unset] 1500px:h-[700px] 1500px:w-[700px]">
+               <div className="1000px:w-[40%] flex 1000px:min-h-screen items-center justify-end pt-[70px] 1000px:pt-[0] z-10" >
                 {/* Image 1 code here */}
                 <Image
                     src={require("../../../public/assets/Instructor.png")}
@@ -19,18 +19,18 @@ const Hero: FC<Props> = (props) => {
                     className="object-contain 1100px:max-w-[90%] w-[90%] 1500px:max-w-[85%] h-[auto] z-[10] rounded-full"
                 />
                 </div> 
-                <div className="1000px:w-[60%] flex flex-col items-center 1000px:mt-[0px] text-center 1000px:text-left mt-[25px]">
+                <div className="flex flex-col w-[50%] items-center 1000px:mt-[0px] text-center 1000px:text-left mt-[25px]">
                    {/* //due */}
-                    <h2 className="dark:text-white text-[#000000c7] text-[30px] px-3 w-full 1000px:text-[70px] font-[600] font-Josefin py-2 1000px:leading-[75px] 1500px:w-[60px] mt-[200px] ml-[180px]">
+                    <h2 className="dark:text-white text-[#000000c7] text-[30px] px-3 w-full 1000px:text-[70px] font-[600] font-Josefin py-2 1000px:leading-[75px] 1500px:w-[60px] mt-[180px] ml-[180px]">
                         Improve Your Online Learning Experience Better Instantly
                     </h2>
                     <br />
-                    <p className="dark:text-[#edfff4] text-[#000000ac] font-Josefin font-[600] text-[18px] 1500px:!w-[55%] 1100px:!w-[78%]">
+                    <p className="dark:text-[#edfff4] text-[#000000ac] font-Josefin ml-9 font-[600] text-[18px] 1500px:!w-[55%] 1100px:!w-[78%]">
                         We have 40k+ Online courses & 500k+ online students.
                     </p>
                     <br />
                     <br />
-                    <div className="1500px:w-[55%] 1100px:w-[78%] w-[90%] h-[50px] bg-transparent relative" >
+                    <div className="1500px:w-[55%] ml-9 1100px:w-[78%] w-[90%] h-[50px] bg-transparent relative" >
                       <input
                         type="search"
                         placeholder="Search Courses..."
@@ -42,7 +42,7 @@ const Hero: FC<Props> = (props) => {
                     </div>
                     <br />
                     <br />
-                    <div className="1500px:w-[55%] 1100px:w-[78%] w-[90%] flex items-center">
+                    <div className="1500px:w-[55%] ml-9 1100px:w-[78%] w-[90%] flex items-center">
                         <Image 
                             src={require("../../../public/assets/client1.jpg")}
                             alt=""

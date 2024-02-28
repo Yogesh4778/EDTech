@@ -129,13 +129,13 @@ const Signup: FC<Props> = ({setRoute}) => {
          {
             !show ? (
                 <AiOutlineEye
-                   className="absolute bottom-3 right-2 z-1 cursor-pointer"
+                   className="absolute bottom-3 right-2 z-1 cursor-pointer dark:text-white text-black"
                    size={20}
                    onClick={() => setShow(true)}
                 />
             )   : (
                 <AiOutlineEyeInvisible
-                   className="absolute bottom-3 right-2 z-1 cursor-pointer"
+                   className="absolute bottom-3 right-2 z-1 cursor-pointer dark:text-white text-black"
                    size={20}
                    onClick={() => setShow(false)}
                 />   
@@ -159,8 +159,8 @@ const Signup: FC<Props> = ({setRoute}) => {
         or join with
         </h5>
         <div className="flex items-center justify-center my-3"> 
-            <FcGoogle size={30} className="cursor-pointer mr-2"/>
-            <AiFillGithub size={30} className="cursor-pointer ml-2"/>
+            <FcGoogle size={30} className="cursor-pointer mr-2 dark:text-white text-black"/>
+            <AiFillGithub size={30} className="cursor-pointer ml-2 dark:text-white text-black"/>
         </div>  
         <h5 className="text-center pt-4 font-Poppins text-[14px] text-black dark:text-white">
             Already have an account? {" "}

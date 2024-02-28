@@ -18,7 +18,7 @@ const page:FC<Props> = () => {
     <div>
         <Protected>
         <Heading
-      title={`${user?.name} profile`}
+      title={`${user?.name} profile - Elearning`}
       description="AAO aur SIkho"
       keywords="WEBD, Programming, DSA"
       />

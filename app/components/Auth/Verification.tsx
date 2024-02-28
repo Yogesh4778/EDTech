@@ -82,7 +82,7 @@ const Verification: FC<Props> = ({ setRoute }) => {
       <br />
       <div className="w-full flex items-center justify-center mt-2">
         <div className="w-[80px] h-[80px] rounded-full bg-[#497DF2] flex items-center justify-center">
-          <VscWorkspaceTrusted size={40} />
+          <VscWorkspaceTrusted size={40} className="dark:text-white text-black"/>
         </div>
       </div>
       <br />
