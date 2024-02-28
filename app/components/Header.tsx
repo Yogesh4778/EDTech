@@ -119,7 +119,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
               ) : (
                 <HiOutlineUserCircle
                   size={25}
-                  className="hidden 800px:block cursor-pointer dark:text-white text-black"
+                  className="hidden 800px:block cursor-pointer dark:text-white text-black ml-4"
                   onClick={() => setOpen(true)}
                 />
               )}
