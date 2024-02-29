@@ -14,8 +14,8 @@ const Page: FC<Props> = (props) => {
   return (
     <div>
       <Heading
-      title="ELearning by Yogi"
-      description="AAO aur SIkho"
+      title="EduPulse Education"
+      description="EduPulse is a platform for learning."
       keywords="WEBD, Programming, DSA"
       />
       <Header 
