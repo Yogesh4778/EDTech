@@ -23,12 +23,12 @@ const CourseInformation: FC<Props> = ({
 
   const handleFileChange = (e: any) => {
     const file = e.target.files?.[0];
-    if(file){
+    if (file) {
       const reader = new FileReader();
 
-      reader.onload = (e:any) => {
-        if(reader.readyState === 2){
-          setCourseInfo({...courseInfo, thumbnail: reader.result});
+      reader.onload = (e: any) => {
+        if (reader.readyState === 2) {
+          setCourseInfo({ ...courseInfo, thumbnail: reader.result });
         }
       };
       reader.readAsDataURL(file);
@@ -51,16 +51,15 @@ const CourseInformation: FC<Props> = ({
 
     const file = e.dataTransfer.files?.[0];
 
-    if(file){
+    if (file) {
       const reader = new FileReader();
 
       reader.onload = () => {
-        setCourseInfo({...CourseInformation, thumbnail: reader.result});
-      }
+        setCourseInfo({ ...CourseInformation, thumbnail: reader.result });
+      };
       reader.readAsDataURL(file);
     }
-  }
-
+  };
 
   return (
     <div className="w-[80%] m-auto mt-24">
@@ -116,7 +115,9 @@ const CourseInformation: FC<Props> = ({
             />
           </div>
           <div className="w-[50%]">
-            <label className={`${styles.label} w-[50%]`}>Estimated Price (optional)</label>
+            <label className={`${styles.label} w-[50%]`}>
+              Estimated Price (optional)
+            </label>
             <input
               type="number"
               name=""
@@ -133,9 +134,7 @@ const CourseInformation: FC<Props> = ({
         </div>
         <br />
         <div>
-          <label className={`${styles.label}`}>
-            Course Tags
-          </label>
+          <label className={`${styles.label}`}>Course Tags</label>
           <input
             type="text"
             name=""
@@ -184,14 +183,44 @@ const CourseInformation: FC<Props> = ({
         </div>
         <br />
         <div className="w-full">
-          <input 
+          <input
             type="file"
             accept="image/*"
             id="file"
             className="hidden"
             onChange={handleFileChange}
-            />
+          />
+          {/* dragging feature */}
+          <label
+            htmlFor="file"
+            className={`w-full min-h-[10vh] dark:border-white border-[#00000026] p-3 border flex items-center justify-center ${
+              dragging ? "bg-blue-500" : "bg-transparent"
+            }`}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+          >
+            {courseInfo.thumbnail ? (
+              <img
+                src={courseInfo.thumbnail}
+                alt="courseThumbnail"
+                className="max-h-full w-full object-cover"
+              />
+            ) : (
+              <span className="dark:text-white text-black">
+                Drag and drop your thumbnail here or click to browse
+              </span>
+            )}
+          </label>
         </div>
+        <br />
+        <div className="w-full flex items-center justify-end">
+              <input type="submit"
+                     value="Next"
+                    className="w-full 800px:w-[180px] h-[40px] bg-[#37a39a] text-center text-[#fff] rounded mt-8 cursor-pointer" />
+        </div>
+        <br />
+        <br />
       </form>
     </div>
   );
