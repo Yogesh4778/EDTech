@@ -11,7 +11,6 @@ type RegistrationData = {};
 
 export const authApi = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
-        //endpoints here
         register: builder.mutation<RegistrationResponse,RegistrationData>({
         query: (data) => ({
             url:"registration",
