@@ -35,7 +35,7 @@ export const authApi = apiSlice.injectEndpoints({
     }),
     activation: builder.mutation({
         query: ({activation_token, activation_code}) => ({
-            url: "activate-user",
+            url: "activateUser",
             method:"POST",
             body:{
                 activation_token,
@@ -45,7 +45,7 @@ export const authApi = apiSlice.injectEndpoints({
     }),
     login: builder.mutation({
         query: ({email, password}) => ({
-            url: "login",
+            url: "Login",
             method: "POST",
             body: {
                 email,
@@ -71,7 +71,7 @@ export const authApi = apiSlice.injectEndpoints({
 
     socialAuth: builder.mutation({
         query: ({email, name, avatar}) => ({
-            url: "social-auth",
+            url: "socialAuth",
             method: "POST",
             body: {
                 email,
@@ -98,7 +98,7 @@ export const authApi = apiSlice.injectEndpoints({
 
     logOut: builder.query({
         query: () => ({
-            url: "logout",
+            url: "Logout",
             method: "GET",
             credentials: "include" as const,
         }),

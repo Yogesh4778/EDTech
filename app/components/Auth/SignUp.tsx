@@ -38,6 +38,7 @@ const Signup: FC<Props> = ({setRoute}) => {
       if("data" in error){
         const errorData = error as any;
         toast.error(errorData.data.message);
+        // toast.error("Error");
       }
     }
   }, [isSuccess, error]);

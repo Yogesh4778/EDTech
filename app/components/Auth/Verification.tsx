@@ -1,5 +1,5 @@
 "use client";
-import { useActivationMutation } from "@/redux/features/auth/authApi";
+import { useActivationMutation } from "../../../redux/features/auth/authApi";
 import { styles } from "../../../app/styles/style";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
@@ -30,7 +30,9 @@ const Verification: FC<Props> = ({ setRoute }) => {
     if (error) {
       if ("data" in error) {
         const errorData = error as any;
+        console.log(errorData);
         toast.error(errorData.data.message);
+        // toast.error("Error");
         setInvalidError(true);
       } else {
         console.log("An error occured:", error);
