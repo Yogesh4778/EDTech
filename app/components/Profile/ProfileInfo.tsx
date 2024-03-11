@@ -76,8 +76,8 @@ const ProfileInfo: FC<Props> = ({ avatar, user }) => {
             accept="image/png,image/jpg,image/jpeg,image/webp"
           />
           <label htmlFor="avatar">
-            <div className="w-[30px] h-[30px] bg-slate-900 rounded-full absolute bottom-2 right-2 flex items-center justify-center cursor-pointer">
-              <AiOutlineCamera size={20} className="z-1" />
+            <div className="w-[30px] h-[30px] dark:bg-slate-900 bg-white rounded-full absolute bottom-2 right-2 flex items-center justify-center cursor-pointer">
+              <AiOutlineCamera size={20} className="z-1 dark:text-white text-black" />
             </div>
           </label>
         </div>
@@ -88,7 +88,7 @@ const ProfileInfo: FC<Props> = ({ avatar, user }) => {
         <form onSubmit={handleSubmit}>
           <div className="800px:w-[50%] m-auto block pb-4">
             <div className="w-[100%]">
-              <label className="block pb-2">Full Name</label>
+              <label className={`${styles.label} block pb-2`}>Full Name</label>
               <input
                 type="text"
                 className={`${styles.input} !w-[95%] mb-4 800px:mb-0  text-black dark:text-[#fff]`}
@@ -98,7 +98,7 @@ const ProfileInfo: FC<Props> = ({ avatar, user }) => {
               />
             </div>
             <div className="w-[100%] pt-2">
-              <label className="block pb-2">Email Address</label>
+              <label className={`${styles.label} block pb-2`}>Email Address</label>
               <input
                 type="text"
                 readOnly

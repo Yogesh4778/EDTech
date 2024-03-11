@@ -29,7 +29,7 @@ const ChangePassword: FC<Props> = (props) => {
     if(error){
         if("data" in error){
             const errorData = error as any;
-            toast.error(errorData.data.message);
+            toast.error(errorData.data.Message);
         }
     }
   }, [isSuccess, error])
@@ -84,7 +84,7 @@ const ChangePassword: FC<Props> = (props) => {
             />
 
             <input 
-                className={`w-[95%] h-[40px] border-[#37a39a] text-center  text-black dark:text-[#fff] rounded-[3px] mt-8 cursor-pointer`} 
+                className={`w-[95%] h-[40px] border border-[#37a39a] text-center  text-black dark:text-[#fff] rounded-[3px] mt-8 cursor-pointer`} 
                 required
                 value="Update"
                 type="submit"

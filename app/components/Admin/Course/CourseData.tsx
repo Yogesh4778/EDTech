@@ -75,7 +75,7 @@ const CourseData: FC<Props> = ({
             onChange={(e) => handleBenefitChange(index, e.target.value)}
           />
         ))}
-        <AddCircleIcon
+        <AddCircleIcon className="dark:text-white text-black"
           style={{ margin: "10px 0px", cursor: "pointer", width: "30px" }}
           onClick={handleAddBenefit}
         />
@@ -99,7 +99,7 @@ const CourseData: FC<Props> = ({
             onChange={(e) => handlePrerequisitesChange(index, e.target.value)}
           />
         ))}
-        <AddCircleIcon
+        <AddCircleIcon className="dark:text-white text-black"
           style={{ margin: "10px 0px", cursor: "pointer", width: "30px" }}
           onClick={handleAddPrerequisite}
         />
