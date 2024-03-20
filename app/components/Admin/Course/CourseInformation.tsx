@@ -127,7 +127,7 @@ const CourseInformation: FC<Props> = ({
                 setCourseInfo({ ...courseInfo, estimatedPrice: e.target.value })
               }
               id="price"
-              placeholder="97"
+              placeholder="30"
               className={`${styles.input}`}
             />
           </div>
