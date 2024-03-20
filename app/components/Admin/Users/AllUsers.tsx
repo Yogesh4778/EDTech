@@ -51,10 +51,12 @@ const AllCourses: FC<Props> = ({ isTeam }) => {
       }
     }
     if (isSuccess) {
+      refetch(); //for instantly update the add member or remove member in manage team
       toast.success("User role updated successfully");
       setActive(false);
     }
     if(deleteSuccess){
+      refetch(); 
       toast.success("User deleted successfully");
       setOpen(false);
     }
